@@ -1,0 +1,15 @@
+/* Estilos personalizados */
+.custom-container {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar horizontalmente */
+    display: flex; /* Utilizar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Estilos personalizados para los input */
+.custom-input {
+    border: none;
+    border-bottom: 2px solid fuchsia; /* Color del borde inferior */
+    outline: none; /* Quitar el borde de enfoque */
+}
