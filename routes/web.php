@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
 Auth::routes();
@@ -28,7 +28,7 @@ Auth::routes([
     "reset" => false,// no pueden olvidar contraseña
 ]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 // Permitir logout con petición get
 Route::get("/logout", function () {
     Auth::logout();
@@ -41,7 +41,7 @@ Route::middleware("auth")
         Route::resource('clientes', 'App\Http\Controllers\ClientesController');
         Route::resource("usuarios", "App\Http\Controllers\UserController")->parameters(["usuarios" => "user"]);
         Route::resource("productos", "App\Http\Controllers\ProductosController");
-        Route::get("/ventas/ticket", "VentasController@ticket")->name("ventas.ticket");
+        Route::get("/ventas/ticket", "App\Http\Controllers\VentasController@ticket")->name("ventas.ticket");
         Route::resource("ventas", "App\Http\Controllers\VentasController");
         Route::get("/vender", "App\Http\Controllers\VenderController@index")->name("vender.index");
         Route::post("/productoDeVenta", "App\Http\Controllers\VenderController@agregarProductoVenta")->name("agregarProductoVenta");

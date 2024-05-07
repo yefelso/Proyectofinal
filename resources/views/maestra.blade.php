@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+    
 
 <head>
     <meta charset="utf-8">
@@ -39,22 +40,22 @@
                 </li>
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('home')}}">Inicio&nbsp;<i class="fa fa-home"></i></a>
+                    <a style="color: red;" class="nav-link" href="{{route('home')}}">Inicio&nbsp;<i class="fa fa-home"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('productos.index')}}">Productos&nbsp;<i class="fa fa-box"></i></a>
+                    <a style="color: yellow;" class="nav-link" href="{{route('productos.index')}}">Productos&nbsp;<i class="fa fa-box"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('vender.index')}}">Vender&nbsp;<i class="fa fa-cart-plus"></i></a>
+                    <a style="color: orange;" class="nav-link" href="{{route('vender.index')}}">Vender&nbsp;<i class="fa fa-cart-plus"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('ventas.index')}}">Ventas&nbsp;<i class="fa fa-list"></i></a>
+                    <a style="color: blue;" class="nav-link" href="{{route('ventas.index')}}">Ventas&nbsp;<i class="fa fa-list"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('usuarios.index')}}">Usuarios&nbsp;<i class="fa fa-users"></i></a>
+                    <a style="color: violet;" class="nav-link" href="{{route('usuarios.index')}}">Usuarios&nbsp;<i class="fa fa-users"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('clientes.index')}}">Clientes&nbsp;<i class="fa fa-users"></i></a>
+                    <a style="color: skyblue;" class="nav-link" href="{{route('clientes.index')}}">Clientes&nbsp;<i class="fa fa-users"></i></a>
                 </li>
             @endguest
         </ul>
