@@ -96,9 +96,9 @@
         con
         <i class="fa fa-heart" style="color: #ff2b56;"></i>
         por
-        <a class="text-white" href="//parzibyte.me/blog">Parzibyte</a>
+        
         &nbsp;|&nbsp;
-        <a target="_blank" class="text-white" href="//github.com/parzibyte/sistema_ventas_laravel">
+        <a target="_blank" class="text-white" href="https://github.com/yefelso/Proyectofinal.git">
             <i class="fab fa-github"></i>
         </a>
     </span>
