@@ -68,7 +68,7 @@
                 </li>
             @endauth
             <li class="nav-item">
-                <a class="nav-link" href="{{route('inicio')}}">Soporte&nbsp;<i
+                <a class="nav-link" href="{{route('inicio')}}">Inicio&nbsp;<i
                         class="fa fa-hands-helping"></i></a>
             </li>
             <li class="nav-item">
