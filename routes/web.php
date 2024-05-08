@@ -3,7 +3,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-
 Route::get('/', function () {
     return view('inicio');
 });
@@ -15,6 +14,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/mostrar-productos', [MostrarProductosController::class, 'index']);
+
+
+Route::get('/comprar', function () {
+    return view('comprar');
+})->name('comprar');
+
 
 
 Route::get("/acerca-de", function () {
