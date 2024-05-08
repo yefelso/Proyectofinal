@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto; // Asegúrate de importar el modelo Producto
 use Illuminate\Http\Request;
+use App\Producto;
 
 class MostrarProductosController extends Controller
 {
+    /**
+     * Muestra todos los productos.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         // Obtener todos los productos desde la base de datos
         $productos = Producto::all();
 
-        // Pasar los productos a la vista y mostrarla
-        return view('comprar.index', compact('productos'));
+        // Retornar la vista con los productos
+        return view('comprar', compact('productos'));
     }
 }
