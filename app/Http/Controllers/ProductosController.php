@@ -3,6 +3,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
 
 use App\Producto;
 use Illuminate\Http\Request;
@@ -36,11 +37,23 @@ class ProductosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $producto = new Producto($request->input());
-        $producto->saveOrFail();
-        return redirect()->route("productos.index")->with("mensaje", "Producto guardado");
-    }
+{
+    // Validar la solicitud
+    $request->validate([
+        'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Requisitos para la imagen
+    ]);
+
+    // Guardar la imagen en el sistema de archivos
+    $imagenPath = $request->file('imagen')->store('public/imagenes');
+
+    // Crear un nuevo Producto
+    $producto = new Producto($request->except('imagen'));
+    $producto->imagen = Storage::url($imagenPath); // Almacenar la URL de la imagen en la base de datos
+    $producto->saveOrFail();
+
+    // Redirigir a la vista index con un mensaje de éxito
+    return redirect()->route("productos.index")->with("mensaje", "Producto guardado");
+}
 
     /**
      * Display the specified resource.
